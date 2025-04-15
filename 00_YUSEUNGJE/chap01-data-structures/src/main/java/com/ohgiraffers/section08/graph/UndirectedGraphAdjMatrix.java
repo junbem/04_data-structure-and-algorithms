@@ -111,6 +111,7 @@ public class UndirectedGraphAdjMatrix {
         // 2. addNode 테스트: 새로운 노드 추가
         int newNode = graphMatrix.addNode();
         System.out.println("새로운 노드 추가: " + newNode);
+        graphMatrix.printGraph();
         // 노드 2, 4 를 새로운 노드 5 와 연결
         // 그래프 구조:
         // 1 - 2 \
