@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
@@ -70,7 +71,7 @@ class B_BFSTests {
     @Timeout(value=1000, unit= TimeUnit.MILLISECONDS)
     @ParameterizedTest
     @MethodSource("provideSource")
-    public void bfsTest(String input, Integer output) {
+    public void bfsTest(String input, Integer output) throws IOException {
         Integer result = B_BFS.solution(input);
         Assertions.assertEquals(output, result);
     }
